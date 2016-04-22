@@ -1,0 +1,217 @@
+.container{
+	max-width: 800px;
+    margin: 0 auto;
+}
+
+.heading h2{
+	font-weight: 200;
+}
+
+.treatment_plans{
+	display: inline-block;
+}
+
+
+/*test sheets*/
+
+.treatment_plans {
+  position: relative;
+  z-index: 9;
+}
+
+.treatment_plans_choices {
+  margin-left: -20px;
+  /*text-align: center;*/
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.treatment_plans_choices li {
+  float: left;
+  width: 30%;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  display: flex;
+  height: 18em;
+}
+
+.treatment_plans_choices a {
+  text-decoration: none;
+  border-radius: 2px;
+  color: #3F4652;
+  display: block;
+  /*padding: 20px 20px 120px 20px;*/
+  background-color: #fff;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 3px solid #ebeced;
+  width: 100%;
+  backface-visibility: hidden;
+  position: relative;
+  background-size: 100px;
+}
+
+.treatment_plans_choices a:hover {
+	 /*border: 3px solid #00C4CC;*/
+	 border: 3px solid #C0C0C0;
+}
+
+.treatment_plans_choices h3 {
+  font-size: 25px;
+  line-height: 28px;
+  margin: 0 0 10px 0;
+  display: inline-block;
+}
+
+.treatment_plans_choices p {
+  font-size: 12px;
+  line-height: 16px;
+  color: black;
+  margin: 0;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #00C4CC;
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+.treatment_plans ul li a {
+    text-decoration: none;
+}
+
+.plan_heading{
+	padding: 20px 20px 5px 20px;
+	background-color: #04ACF0;
+}
+
+.plan_range{
+	padding: 10px 20px 5px 20px;
+	background-color: #F5F5F5;
+	min-height: 3em;
+}
+
+.plan_unit{
+	padding: 10px 20px 100px 20px;
+}
+
+.plan_heading span{
+	font-weight: 400;
+	color: white;
+}
+
+#inline_block{
+	display: inline-block;
+	font-weight: 600;
+}
+
+.plan_range span,
+.plan_unit span{
+	 color: #909095;
+	 font-size: 8pt;
+}
+
+.glyphicon-trash{
+	float: right;
+}
+
+.individual_treatment_plan .plan_unit .glyphicon-plus{
+	font-size: 30pt;
+	padding-top: 1.3em;
+}
+
+      
+/*      .home-wrapper h2 {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 52px;
+      }*/
+/*      
+      .homepageWorkWithUs {
+      margin-left: -20px;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      display: -webkit-flex;
+      display: flex;
+      }*/
+      
+/*      .homepageWorkWithUs li {
+      float: left;
+      width: 33.33%;
+      margin-bottom: 40px;
+      padding-left: 20px;
+      }
+      
+      .homepageWorkWithUs h3 {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      }
+      
+      .homepageWorkWithUs h3 a {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      text-decoration: none;
+      }
+      
+      .homepageWorkWithUs a {
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 14px;
+      }
+      
+      .homepageWorkWithUs p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 10px 0;
+      }*/
+      
+/*main {
+      margin: 0 auto 0 auto;
+      padding: 0 20px;
+      width: 960px;
+      position: relative;
+      }*/
+      
+/*      .banner-wrapper {
+      width: 100%;
+      padding: 50px 0 100px 0;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      }*/
+      
+/*      .content-wrapper {
+      background-color: #fff;
+      padding: 40px 0;
+      }*/
+      
+/*      #content .container.article .header.row h2 {
+      font-weight: 100;
+      }
+      
+      #content p {
+      font-size: 16px;
+      }*/
