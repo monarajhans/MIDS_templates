@@ -1,6 +1,7 @@
 .container{
 	max-width: 800px;
-    margin: 0 auto;
+  margin: 0 auto;
+  margin-bottom: 1em;
 }
 
 .heading h2{
@@ -11,9 +12,6 @@
 	display: inline-block;
 }
 
-
-/*test sheets*/
-
 .treatment_plans {
   position: relative;
   z-index: 9;
@@ -21,7 +19,6 @@
 
 .treatment_plans_choices {
   margin-left: -20px;
-  /*text-align: center;*/
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   display: -webkit-flex;
@@ -31,14 +28,14 @@
 
 .treatment_plans_choices li {
   float: left;
-  width: 30%;
+  width: 33%;
   margin-bottom: 20px;
   padding-left: 20px;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   display: -webkit-flex;
   display: flex;
-  height: 18em;
+  height: 20em;
 }
 
 .treatment_plans_choices a {
@@ -46,7 +43,6 @@
   border-radius: 2px;
   color: #3F4652;
   display: block;
-  /*padding: 20px 20px 120px 20px;*/
   background-color: #fff;
   -moz-transition: all .3s;
   -o-transition: all .3s;
@@ -60,7 +56,6 @@
 }
 
 .treatment_plans_choices a:hover {
-	 /*border: 3px solid #00C4CC;*/
 	 border: 3px solid #C0C0C0;
 }
 
@@ -112,7 +107,7 @@ li {
 }
 
 .plan_unit{
-	padding: 10px 20px 100px 20px;
+	padding: 10px 10px 100px 20px;
 }
 
 .plan_heading span{
@@ -141,77 +136,105 @@ li {
 }
 
       
-/*      .home-wrapper h2 {
-      text-align: center;
-      font-size: 40px;
-      font-weight: 300;
-      line-height: 52px;
-      }*/
-/*      
-      .homepageWorkWithUs {
-      margin-left: -20px;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      display: -webkit-flex;
-      display: flex;
-      }*/
-      
-/*      .homepageWorkWithUs li {
-      float: left;
-      width: 33.33%;
-      margin-bottom: 40px;
-      padding-left: 20px;
-      }
-      
-      .homepageWorkWithUs h3 {
-      font-size: 20px;
-      margin: 0 0 10px 0;
-      font-weight: 700;
-      }
-      
-      .homepageWorkWithUs h3 a {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 24px;
-      text-decoration: none;
-      }
-      
-      .homepageWorkWithUs a {
-      text-decoration: underline;
-      font-weight: 600;
-      font-size: 14px;
-      }
-      
-      .homepageWorkWithUs p {
-      font-size: 16px;
-      line-height: 24px;
-      margin: 0 0 10px 0;
-      }*/
-      
-/*main {
-      margin: 0 auto 0 auto;
-      padding: 0 20px;
-      width: 960px;
-      position: relative;
-      }*/
-      
-/*      .banner-wrapper {
-      width: 100%;
-      padding: 50px 0 100px 0;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      }*/
-      
-/*      .content-wrapper {
-      background-color: #fff;
-      padding: 40px 0;
-      }*/
-      
-/*      #content .container.article .header.row h2 {
-      font-weight: 100;
-      }
-      
-      #content p {
-      font-size: 16px;
-      }*/
+/* Treatment Plan styles */
+.treatment_plan_details {
+  background-color: #F5F5F5;
+  padding: 15px 0;
+  margin-bottom: 2em;
+}      
+
+.treatment_plan_details div {
+    height: 8em;
+    border-right: 1px solid #909095;
+}
+
+.treatment_plan_details p {
+    font-size: 8pt;
+    color: #909095;
+}
+
+.font_weight_500{
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.treatment_plan_plan span{
+  font-weight: 600;
+  color: black;
+}
+
+.treatment_plan_bg_range h3{
+  display: inline-block;
+}
+
+.treatment_plan_bg_range span{
+  font-size: 8pt;
+  color: #909095;
+}
+
+.container a{
+  font-size: 8pt;
+}
+
+.starting_dose_details h4{
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+.contact_input input{
+  width: 2em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select#insulin_type,
+    select#starting_dose {
+        height:30px;
+        line-height:30px;
+        background:#f4f4f4;
+    } 
+}
+select#insulin_type,
+select#starting_dose::-moz-focus-inner { /*Remove button padding in FF*/ 
+    border: 0;
+    padding: 0;
+}
+        
+@media screen\0 { /* IE Hacks: targets IE 8, 9 and 10 */        
+    select#insulin_type,
+    select#starting_dose {
+        height:30px;
+        line-height:30px;
+    }     
+}
+
+select#insulin_type{
+  width: 12em;
+}
+
+select#starting_dose {
+  width: 24em;
+}  
+
+#treatment_first_name{
+  width: 8em;
+  height: 5em;
+  background: #f4f4f4;
+  border: 0;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.starting_dose_details span{
+  vertical-align: bottom;
+}
+
+.underline{
+  border-bottom: 1px solid #909095;
+  margin: 2em 0;
+}
+
+.starting_dose_details input[type="text"], textarea {
+    background: #f4f4f4;
+    border: 0;
+    padding-left: 6px;
+}

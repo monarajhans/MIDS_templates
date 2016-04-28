@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIDS homepage</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="heading">
+			<h2>Mobile Insulin Dosing System</h2>
+		</div>
+		
+		<div class="treatment_plans">
+            <ul class="treatment_plans_choices">
+              <li class="individual_treatment_plan">
+                <a href="">
+                	<div class="plan_heading">
+                		<span>Treatment Plan 1</span>
+                		<span class="glyphicon glyphicon-trash"></span>
+                	</div>
+                	<div class="plan_range">
+                		<p>Fasting BG Target Range</p>
+                		<h3>90 - 130</h3><span>  mg/dL</span>
+                	</div>
+                	<div class="plan_unit">
+                		<p>Treatment Plan</p>
+                		<p id="inline_block">+2 </p><span>  units every days if FBG > 130 mg/dL</span>
+                	</div>
+                </a>
+              </li>
+
+              <li class="individual_treatment_plan">
+                <a href="">
+                	<div class="plan_heading">
+                		<span>Treatment Plan 2</span>
+                		<span class="glyphicon glyphicon-trash"></span>
+                	</div>
+                	<div class="plan_range">
+                		<p>Fasting BG Target Range</p>
+                		<h3>90 - 130</h3><span>  mg/dL</span>
+                	</div>
+                	<div class="plan_unit">
+                		<p>Treatment Plan</p>
+                		<p id="inline_block">+2 </p><span>  units every days if FBG > 130 mg/dL</span></br>
+                		<p id="inline_block">+4 </p><span>  units every days if FBG > 180 mg/dL</span>
+                	</div>
+                </a>
+              </li>
+
+              <li class="individual_treatment_plan">
+                <a href="">
+                	<div class="plan_heading">
+                		<span>Treatment Plan 3</span>
+                		<span class="glyphicon glyphicon-trash"></span>
+                	</div>
+                	<div class="plan_range">
+                		<p>Fasting BG Target Range</p>
+                		<h3>110 - 150</h3><span>  mg/dL</span>
+                	</div>
+                	<div class="plan_unit">
+                		<p>Treatment Plan</p>
+                		<p id="inline_block">+2 </p><span>  units every days if FBG > 150 mg/dL</span>
+                	</div>
+                </a>
+              </li>
+
+              <li class="individual_treatment_plan">
+                <a href="">
+                	<div class="plan_heading">
+                		<span>Geriatric Plan 1</span>
+                		<span class="glyphicon glyphicon-trash"></span>
+                	</div>
+                	<div class="plan_range">
+                		<p>Fasting BG Target Range</p>
+                		<h3>90 - 130</h3><span>  mg/dL</span>
+                	</div>
+                	<div class="plan_unit">
+                		<p>Treatment Plan</p>
+                		<p id="inline_block">-2 </p><span>  units every days if FBG < 90 mg/dL</span></br>
+                		<p id="inline_block">+2 </p><span>  units every days if FBG 130 - 150 mg/dL</span></br>
+                		<p id="inline_block">+3 </p><span>  units every days if FBG > 150 mg/dL</span></br>
+                		<p id="inline_block">+6 </p><span>  units every days if FBG > 250 mg/dL</span></br>
+                	</div>
+                </a>
+              </li>
+
+              <li class="individual_treatment_plan">
+                <a href="">
+                	<div class="plan_heading">
+                		<span>Custom Plan</span>
+                		<span class="glyphicon glyphicon-trash"></span>
+                	</div>
+                	<div class="plan_range">
+                		<p>Start from scratch</p>
+                	</div>
+                	<div class="plan_unit" style="text-align: center;">
+                		<span class="glyphicon glyphicon-plus"></span>
+                	</div>
+                </a>
+              </li>
+            </ul>
+        </div>
+
+	</div>
+</body>
+</html>

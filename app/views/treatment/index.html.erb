@@ -3,103 +3,116 @@
 <head>
 	<title>MIDS homepage</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="heading">
 			<h2>Mobile Insulin Dosing System</h2>
+            <a href="">Choose a different treatment plan</a>
 		</div>
-		
-		<div class="treatment_plans">
-            <ul class="treatment_plans_choices">
-              <li class="individual_treatment_plan">
-                <a href="">
-                	<div class="plan_heading">
-                		<span>Treatment Plan 1</span>
-                		<span class="glyphicon glyphicon-trash"></span>
-                	</div>
-                	<div class="plan_range">
-                		<p>Fasting BG Target Range</p>
-                		<h3>90 - 130</h3><span>  mg/dL</span>
-                	</div>
-                	<div class="plan_unit">
-                		<p>Treatment Plan</p>
-                		<p id="inline_block">+2 </p><span>  units every days if FBG > 130 mg/dL</span>
-                	</div>
-                </a>
-              </li>
 
-              <li class="individual_treatment_plan">
-                <a href="">
-                	<div class="plan_heading">
-                		<span>Treatment Plan 2</span>
-                		<span class="glyphicon glyphicon-trash"></span>
-                	</div>
-                	<div class="plan_range">
-                		<p>Fasting BG Target Range</p>
-                		<h3>90 - 130</h3><span>  mg/dL</span>
-                	</div>
-                	<div class="plan_unit">
-                		<p>Treatment Plan</p>
-                		<p id="inline_block">+2 </p><span>  units every days if FBG > 130 mg/dL</span></br>
-                		<p id="inline_block">+4 </p><span>  units every days if FBG > 180 mg/dL</span>
-                	</div>
-                </a>
-              </li>
+		<div class="treatment_plan_details col-md-12">
+            <div class="treatment_plan_heading col-md-4">
+                <h3>Treatment Plan 1</h3>
+                <a href="">Edit Treatment Plan</a>
+            </div>
+            <div class="treatment_plan_bg_range col-md-3">
+                <p class="font_weight_500">Fasting BG Target Range</p>
+                <h3>90-130</h3><span>  mg/dL</span>
+            </div>
+            <div class="treatment_plan_plan col-md-2">
+                <p class="font_weight_500">Treatment Plan</p>
+                <p><span>+2</span>  units every 3 days if FBG > 130 mg/dL</p>
+            </div>
+            <div class="treatment_plan_warnings col-md-3" style="border: 0;">
+                <p class="font_weight_500">Hypo warning</p>
+                <p>3 readings above 70</p>
+                <p class="font_weight_500">Hyper warning</p>
+                <p>Any fasting reading above 400</p>
+                <p class="font_weight_500">Max Dose</p>
+                <p>60 units</p>
+            </div>
+        </div>
 
-              <li class="individual_treatment_plan">
-                <a href="">
-                	<div class="plan_heading">
-                		<span>Treatment Plan 3</span>
-                		<span class="glyphicon glyphicon-trash"></span>
-                	</div>
-                	<div class="plan_range">
-                		<p>Fasting BG Target Range</p>
-                		<h3>110 - 150</h3><span>  mg/dL</span>
-                	</div>
-                	<div class="plan_unit">
-                		<p>Treatment Plan</p>
-                		<p id="inline_block">+2 </p><span>  units every days if FBG > 150 mg/dL</span>
-                	</div>
-                </a>
-              </li>
+        <div class="starting_dose_details col-md-12">
+            <%= form_for @treatment, url: treatment_path, method: :post do |f| %>
+                <h4>Starting Dose</h4>
+                <div class="col-md-12 starting_dose_div">
+                    <span class="col-md-3">Insulin Type</span>
+                    <span class="col-md-6">Calculate Starting Dose (Optional)</span>
+                    <span class="col-md-3">Starting Dose</span>
 
-              <li class="individual_treatment_plan">
-                <a href="">
-                	<div class="plan_heading">
-                		<span>Geriatric Plan 1</span>
-                		<span class="glyphicon glyphicon-trash"></span>
-                	</div>
-                	<div class="plan_range">
-                		<p>Fasting BG Target Range</p>
-                		<h3>90 - 130</h3><span>  mg/dL</span>
-                	</div>
-                	<div class="plan_unit">
-                		<p>Treatment Plan</p>
-                		<p id="inline_block">-2 </p><span>  units every days if FBG < 90 mg/dL</span></br>
-                		<p id="inline_block">+2 </p><span>  units every days if FBG 130 - 150 mg/dL</span></br>
-                		<p id="inline_block">+3 </p><span>  units every days if FBG > 150 mg/dL</span></br>
-                		<p id="inline_block">+6 </p><span>  units every days if FBG > 250 mg/dL</span></br>
-                	</div>
-                </a>
-              </li>
+                    
+                    <div class="col-md-3">
+                        <%= select_tag(:insulin_type, options_for_select([['Lantus', 1], ['Toujeo', 2], ['Levemir', 3], ['Tresiba', 4], ['Basalgar', 5]]) ) %>
+                    </div>
 
-              <li class="individual_treatment_plan">
-                <a href="">
-                	<div class="plan_heading">
-                		<span>Custom Plan</span>
-                		<span class="glyphicon glyphicon-trash"></span>
-                	</div>
-                	<div class="plan_range">
-                		<p>Start from scratch</p>
-                	</div>
-                	<div class="plan_unit" style="text-align: center;">
-                		<span class="glyphicon glyphicon-plus"></span>
-                	</div>
-                </a>
-              </li>
-              
-            </ul>
+                    <div class="col-md-6">
+                        <%= select_tag(:starting_dose, options_for_select([['New to Insulin (Fixed 10 units)', 1], ['New to Insulin (Weight based)', 2], ['Switch NPH once daily patient', 3], ['Switch NPH twice daily patient', 4]])) %>    
+                    </div> 
+
+                    <div class="col-md-3">                  
+                        <%= f.text_field :first_name %><span>units</span><br />
+                    </div>
+                </div>
+
+                <div class="col-md-12 underline"></div>
+                        
+                <h4>Patient Reminders</h4>
+
+                    <div class="col-md-12 contact_input">
+                        <p>The patient will recieve a reminder from the Glooko mobile app at the chosen times. Patients can update the reminder times in the app.</p>
+                        
+                        <div class="col-md-4">
+                            <p>Check fasting blood glucose at</p>
+                            <input type="text" disabled="disabled" value="7"></input><span>:</span>
+                            <input type="text" disabled="disabled" value="00"></input>
+                            <input type="text" disabled="disabled" value="AM"></input>
+                        </div>
+
+                        <div class="col-md-4">
+                            <p>Inject insulin everyday at</p>
+                            <input type="text" disabled="disabled" value="9"></input><span>:</span>
+                            <input type="text" disabled="disabled" value="00"></input>
+                            <input type="text" disabled="disabled" value="AM"></input>
+                        </div>
+                    </div>
+
+                <div class="col-md-12 underline"></div>
+
+                <h4>Contact Information</h4>
+
+                    <div class="col-md-12">
+                        <p>Contact Information will be visible to the patient when an alert occurs.</p>
+                        
+                        <div class="col-md-4">
+                            <p>Clinician name</p>
+                            <input type="text" disabled="disabled" value="Dr. Jeff Chang"></input>
+
+                            <p>Phone</p>
+                            <input type="text" disabled="disabled" value="555-555-5555"></input>
+                        </div>
+
+                        <div class="col-md-8">
+                            <p>Other instructions</p>
+                            <textarea class="col-md-12" disabled="disabled">
+                                www.dr.chang.com/contact 
+                                For emergencies always call 911.
+                            </textarea>
+                        </div>
+                    </div>
+
+                <div class="col-md-12 underline"></div>
+
+                    <div class="col-md-12 treatment_plan_buttons"> 
+                        <button>Cancel</button>
+                         <%= f.submit %>
+                    </div>
+                
+            <% end %>
         </div>
 
 	</div>
